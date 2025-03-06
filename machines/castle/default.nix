@@ -44,6 +44,12 @@
   };
 
   programs.dconf.enable = true;
-
   fonts.packages = [ pkgs.cascadia-code ];
+
+  # Users
+  users.users.newky = {
+    isNormalUser = true;
+    description = "newky";
+    extraGroups = [ "wheel" "networkmanager" ];
+  }
 }
