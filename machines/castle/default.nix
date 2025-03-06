@@ -51,5 +51,8 @@
     isNormalUser = true;
     description = "newky";
     extraGroups = [ "wheel" "networkmanager" ];
-  }
+    password = "12345";
+  };
+
+  system.stateVersion = "24.11";
 }

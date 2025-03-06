@@ -1,7 +1,7 @@
 # Steam and Gamescope configuration
 
-{ config, ... }: {
-  environment.systemPackages = pkgs.mangohud;
+{ config, pkgs, ... }: {
+  environment.systemPackages = [ pkgs.mangohud ];
   programs = {
     steam = {
       enable = true;

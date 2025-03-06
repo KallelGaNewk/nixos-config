@@ -4,5 +4,5 @@
     ./openssh.nix
     ./pipewire.nix
     ./printing.nix
-  ]
+  ];
 }

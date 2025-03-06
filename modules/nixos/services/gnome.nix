@@ -1,13 +1,13 @@
 # GNOME configuration
 
-{ config, ... }: {
+{ config, pkgs, ... }: {
   services.xserver = {
     enable = false; # Only using Wayland
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
   };
 
-  environment.gnome.excludePackages = (with pkgs; [
+  environment.gnome.excludePackages = with pkgs; [
     atomix # puzzle game
     cheese # webcam tool
     epiphany # web browser
@@ -23,8 +23,8 @@
     iagno # go game
     tali # poker game
     totem # video player
-  ]);
+  ];
 
   # Systray Icons
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  services.udev.packages = with pkgs; [ gnome-settings-daemon ];
 }

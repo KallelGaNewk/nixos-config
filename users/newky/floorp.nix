@@ -16,7 +16,7 @@
         clearurls
       ];
       settings = {
-        "browser.uiCustomization.state" = (builtins.readFile ../../modules/home-manager/floorp-uiState.json);
+        "browser.uiCustomization.state" = (builtins.readFile ../../assets/floorp-uiState.json);
         "floorp.lepton.interface" = 1;
         "browser.bookmarks.restore_default_bookmarks" = false;
         "browser.download.panel.shown" = true;
@@ -58,6 +58,6 @@
         "userChrome.urlView.always_show_page_actions" = false;
         "userChrome.urlView.move_icon_to_left" = false;
       };
-    }
-  }
+    };
+  };
 }

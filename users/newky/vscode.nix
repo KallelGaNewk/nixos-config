@@ -66,6 +66,6 @@
       "rust-analyzer.lens.implementations.enable" = false;
       "rust-analyzer.inlayHints.chainingHints.enable" = false;
       "material-icon-theme.folders.theme" = "specific";
-    }
+    };
   };
 }
