@@ -43,6 +43,7 @@
     ];
     sessionVariables = {
       # Enable Ozone Wayland support in Chromium and Electron based applications
+      # This doesn't fix GNOME's Client-side decorations (CSD) for Spotify with blue bars.
       NIXOS_OZONE_WL = "1";
     };
   };

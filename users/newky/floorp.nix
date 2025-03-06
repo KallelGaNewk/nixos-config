@@ -14,7 +14,7 @@
             { name = ""; url = "https://cobalt.tools/"; }
             { name = ""; url = "https://github.com/"; }
             { name = ""; url = "https://www.instagram.com/ian_kallel/"; }
-          ]
+          ];
         }
       ];
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [

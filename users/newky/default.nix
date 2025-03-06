@@ -23,11 +23,11 @@
   # '';
 
   home.packages = with pkgs; [
-    spotify
     telegram-desktop
     (discord.override {
       withOpenASAR = true;
       withVencord = true;
+      withTTS = false;
     })
 
     fastfetch # https://github.com/fastfetch-cli/fastfetch
@@ -40,6 +40,11 @@
     which
     tree
   ];
+
+  services.spotifyd = {
+    enable = true;
+    settings.global.device_name = "Newky";
+  };
 
   programs.git = {
     enable = true;
