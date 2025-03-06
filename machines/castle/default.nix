@@ -30,9 +30,17 @@
 
   # Network
   networking = {
-    hostName = "castle";
+    hostName = "Castle";
     networkmanager.enable = true; # group: networkmanager
-    firewall.enable = true;
+    firewall = {
+      enable = true;
+      allowedUDPPorts = [
+        5353 # Spotifyd mDNS
+      ];
+      allowedTCPPorts = [
+        3535 # Spotifyd ZeroConf
+      ];
+    };
   };
 
   # Environment

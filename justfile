@@ -1,5 +1,5 @@
 switch target:
-  sudo nixos-rebuild switch --flake .\#{{target}}
+  sudo nixos-rebuild switch --flake .#{{target}}
 
 update:
   nix flake update
@@ -16,3 +16,7 @@ debug:
 [confirm('Are you sure you want to delete all .homemanagerbackupwhichthereisnooptiontodisable files?')]
 fixhm:
   sudo find / -type f -name "*.homemanagerbackupwhichthereisnooptiontodisable" -exec rm -f {} \;
+
+genhw target:
+  nixos-generate-config --dir ./machines/{{target}}
+  rm ./machines/{{target}}/configuration.nix
