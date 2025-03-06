@@ -11,7 +11,7 @@
         { name = ""; url = "https://github.com/"; }
         { name = ""; url = "https://www.instagram.com/ian_kallel/"; }
       ];
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         ublock-origin
         clearurls
       ];
