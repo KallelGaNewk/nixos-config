@@ -18,9 +18,12 @@
     };
   };
 
+  console.keyMap = "br";
+
  # Set keyboard layout for X11 even if not in use, just to make sure
   services.xserver.xkb = {
     layout = "br";
-    variant = "abnt2";
+    variant = "nativo";
+    model = "abnt2";
   };
 }
