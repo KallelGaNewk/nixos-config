@@ -3,8 +3,9 @@
 {
   imports = [
     ./floorp.nix
-    ./vscode.nix
     ./gnome.nix
+    ./vscode.nix
+    ./zed.nix
   ];
 
   home.username = "newky";
