@@ -15,7 +15,7 @@
 
   outputs = inputs@{ nixpkgs, home-manager, nur, ... }: {
     nixosConfigurations = {
-      Castle = nixpkgs.lib.nixosSystem {
+      castle = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [

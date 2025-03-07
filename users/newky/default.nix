@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   imports = [
+    ./alacritty.nix
     ./cursor.nix
     ./floorp.nix
     ./gnome.nix
@@ -28,6 +29,9 @@
       withVencord = true;
       withTTS = false;
     })
+    (osu-lazer-bin.override {
+      nativeWayland = true;
+    })
     telegram-desktop
 
     bottom # https://github.com/ClementTsang/bottom
@@ -55,11 +59,7 @@
     userEmail = "kallelgn@gmail.com";
   };
 
-  programs.alacritty = {
-    enable = true;
-    # TODO: Alacritty settings
-    # settings = {};
-  };
+
 
   programs.bash = {
     enable = true;

@@ -30,7 +30,7 @@
 
   # Network
   networking = {
-    hostName = "Castle";
+    hostName = "castle";
     networkmanager.enable = true; # group: networkmanager
     firewall = {
       enable = true;
