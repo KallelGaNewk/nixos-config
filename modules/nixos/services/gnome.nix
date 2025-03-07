@@ -1,6 +1,6 @@
 # GNOME configuration
 
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   services.xserver = {
     enable = false; # Only using Wayland
     displayManager.gdm.enable = true;

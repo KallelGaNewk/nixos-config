@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ pkgs, ... }: {
   programs.floorp = {
     enable = true;
     package = (pkgs.wrapFirefox (pkgs.floorp-unwrapped.override { pipewireSupport = true; }) {});

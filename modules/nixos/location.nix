@@ -1,6 +1,5 @@
 # ABNT2 keyboard, UTC-3 time zone, english system, pt-br format;
-
-{ config, ... }: {
+{
   time.timeZone = "America/Sao_Paulo";
 
   i18n = {

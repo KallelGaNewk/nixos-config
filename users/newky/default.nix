@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ pkgs, ... }: {
   imports = [
     ./floorp.nix
     ./gnome.nix

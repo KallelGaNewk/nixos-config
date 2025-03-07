@@ -1,6 +1,5 @@
 # Configuration of CUPS and Avahi
-
-{ config, ... }: {
+{
   services.printing = {
     enable = true;
     tempDir = "/tmp/cups";

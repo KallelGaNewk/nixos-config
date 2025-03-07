@@ -1,6 +1,5 @@
 # sshd and sftp configuration
-
-{ config, ... }: {
+{
   services.openssh = {
     enable = true;
     startWhenNeeded = true;

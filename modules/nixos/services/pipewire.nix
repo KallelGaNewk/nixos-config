@@ -1,6 +1,5 @@
 # PipeWire and RealtimeKit system service configuration
-
-{ config, ... }: {
+{
   security.rtkit.enable = true; # Acquire realtime priority
   services.pipewire = {
     enable = true;
