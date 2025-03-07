@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   imports = [
+    ./cursor.nix
     ./floorp.nix
     ./gnome.nix
     ./vscode.nix
@@ -22,22 +23,22 @@
   # '';
 
   home.packages = with pkgs; [
-    telegram-desktop
     (discord.override {
       withOpenASAR = true;
       withVencord = true;
       withTTS = false;
     })
+    telegram-desktop
 
-    fastfetch # https://github.com/fastfetch-cli/fastfetch
-    ouch # https://github.com/ouch-org/ouch
     bottom # https://github.com/ClementTsang/bottom
+    fastfetch # https://github.com/fastfetch-cli/fastfetch
     just # https://github.com/casey/just
     lm_sensors
+    ouch # https://github.com/ouch-org/ouch
 
     file
-    which
     tree
+    which
   ];
 
   services.spotifyd = {

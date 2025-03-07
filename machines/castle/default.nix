@@ -2,8 +2,8 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/location.nix
-    ../../modules/nixos/steam.nix
     ../../modules/nixos/services
+    ../../modules/nixos/steam.nix
   ];
 
   # Enable flakes
@@ -63,7 +63,7 @@
   users.users.newky = {
     isNormalUser = true;
     description = "newky";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     password = "12345";
   };
 

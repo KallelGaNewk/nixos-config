@@ -7,39 +7,39 @@
       enableExtensionUpdateCheck = false;
       extensions = with pkgs.vscode-extensions; [];
       userSettings = {
-        "workbench.productIconTheme" = "material-product-icons";
-        "workbench.iconTheme" = "material-icon-theme";
+        "diffEditor.renderSideBySide" = false;
         "editor.fontFamily" = "Cascadia Code";
         "editor.fontLigatures" = true;
         "editor.inlayHints.fontSize" = 12;
-        "editor.renderWhitespace" = "trailing";
+        "editor.minimap.enabled" = false;
         "editor.renderFinalNewline" = "dimmed";
         "editor.renderLineHighlightOnlyWhenFocus" = true;
+        "editor.renderWhitespace" = "trailing";
         "editor.smoothScrolling" = true;
-        "workbench.list.smoothScrolling" = true;
-        "editor.minimap.enabled" = false;
         "window.commandCenter" = true;
         "window.dialogStyle" = "custom";
-        "diffEditor.renderSideBySide" = false;
+        "workbench.iconTheme" = "material-icon-theme";
+        "workbench.list.smoothScrolling" = true;
+        "workbench.productIconTheme" = "material-product-icons";
         # Theme - Cursor
-        "editor.cursorStyle" = "line";
-        "editor.cursorSmoothCaretAnimation" = "on";
         "editor.cursorBlinking" = "expand";
+        "editor.cursorSmoothCaretAnimation" = "on";
+        "editor.cursorStyle" = "line";
         # Theme - Cursor - Terminal
-        "terminal.integrated.fontFamily" = "Cascadia Code";
-        "terminal.integrated.cursorStyle" = "line";
         "terminal.integrated.cursorBlinking" = true;
+        "terminal.integrated.cursorStyle" = "line";
         "terminal.integrated.cursorWidth" = 2;
+        "terminal.integrated.fontFamily" = "Cascadia Code";
         "terminal.integrated.smoothScrolling" = true;
         # QOL - Editor
-        "editor.tabSize" = 4;
-        "editor.formatOnSave" = true;
         "editor.formatOnPaste" = true;
-        "explorer.confirmDragAndDrop" = false;
+        "editor.formatOnSave" = true;
         "editor.inlineSuggest.enabled" = true;
+        "editor.tabSize" = 4;
+        "explorer.confirmDragAndDrop" = false;
         "files.insertFinalNewline" = true;
-        "files.trimTrailingWhitespace" = true;
         "files.trimFinalNewlines" = true;
+        "files.trimTrailingWhitespace" = true;
         "workbench.startupEditor" = "none";
         # QOL - Git
         "git.autofetch" = true;
@@ -48,23 +48,23 @@
         # QOL - Terminal
         "terminal.integrated.scrollback" = 150000;
         # Security
-        "security.workspace.trust.enabled" = false;
-        "explorer.confirmDelete" = false;
         "editor.unicodeHighlight.includeStrings" = false;
-        "telemetry.telemetryLevel" = "off";
+        "explorer.confirmDelete" = false;
         "gitlens.telemetry.enabled" = false;
+        "security.workspace.trust.enabled" = false;
+        "telemetry.telemetryLevel" = "off";
         # Plugin specific
-        "hexeditor.showOpenFileButton" = true;
+        "chat.commandCenter.enabled" = false;
         "diffEditor.ignoreTrimWhitespace" = false;
-        "gitlens.showWhatsNewAfterUpgrades" = false;
+        "files.autoSave" = "afterDelay";
         "gitlens.codeLens.enabled" = false;
         "gitlens.hovers.currentLine.over" = "line";
-        "files.autoSave" = "afterDelay";
-        "chat.commandCenter.enabled" = false;
+        "gitlens.showWhatsNewAfterUpgrades" = false;
+        "hexeditor.showOpenFileButton" = true;
+        "material-icon-theme.folders.theme" = "specific";
+        "rust-analyzer.inlayHints.chainingHints.enable" = false;
         "rust-analyzer.interpret.tests" = true;
         "rust-analyzer.lens.implementations.enable" = false;
-        "rust-analyzer.inlayHints.chainingHints.enable" = false;
-        "material-icon-theme.folders.theme" = "specific";
       };
     };
   };

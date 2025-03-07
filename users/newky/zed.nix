@@ -2,12 +2,12 @@
   programs.zed-editor = {
     enable = true;
     extensions = [
+      "catppuccin-blur"
       "html"
-      "toml"
       "just"
       "nix"
+      "toml"
       "vscode_dark_modern"
-      "catppuccin-blur"
     ];
     extraPackages = with pkgs; [
       nixd

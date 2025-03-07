@@ -13,10 +13,10 @@
       enable = true;
       capSysNice = true;
       args = [
-        "--rt"
-        "--mangoapp"
-        "--fullscreen"
         "--adaptive-sync"
+        "--fullscreen"
+        "--mangoapp"
+        "--rt"
         "-W 1920"
         "-H 1080"
       ];

@@ -17,12 +17,11 @@
         }
       ];
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-        ublock-origin
         clearurls
+        ublock-origin
       ];
       settings = {
         "browser.uiCustomization.state" = (builtins.readFile ../../assets/floorp-uiState.json);
-        "floorp.lepton.interface" = 1;
         "browser.bookmarks.restore_default_bookmarks" = false;
         "browser.download.panel.shown" = true;
         "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
@@ -44,6 +43,7 @@
         "floorp.browser.ssb.enabled" = false;
         "floorp.browser.workspaces.enabled" = false;
         "floorp.disable.fullscreen.notification" = true;
+        "floorp.lepton.interface" = 1;
         "pref.privacy.disable_button.view_passwords" = false;
         "privacy.clearOnShutdown_v2.cache" = false;
         "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
