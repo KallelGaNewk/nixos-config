@@ -37,7 +37,12 @@
         rust-analyzer.binary = {
           path = lib.getExe pkgs.rust-analyzer;
         };
+        # nixd.binary = {
+        #   path = lib.getExe pkgs.nixd;
+        # };
       };
+
+      languages.Nix.language_servers = [ "nixd" "!nil" ];
 
       # tab_size = 4;
       # prettier.tabWidth = 4;
