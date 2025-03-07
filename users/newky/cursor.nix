@@ -18,7 +18,6 @@
     in
       getFrom
         "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Modern-Ice.tar.xz"
-        "sha256-poyuYMTccGNQ4ZTryRxf5IvHvJ1Z4RlVWDSip+5QeO8="
+        "sha256-SG/NQd3K9DHNr9o4m49LJH+UC/a1eROUjrAQDSn3TAU="
         "Bibata-Modern-Ice";
-
 }
