@@ -32,6 +32,13 @@
         show_diagnostics = "all";
       };
 
+      # Configure this? from wiki.nixos.org/wiki/Zed
+      lsp = {
+        rust-analyzer.binary = {
+          path = lib.getExe pkgs.rust-analyzer;
+        };
+      };
+
       # tab_size = 4;
       # prettier.tabWidth = 4;
 
