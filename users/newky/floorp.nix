@@ -10,6 +10,7 @@
           name = "Toolbar";
           toolbar = true;
           bookmarks = [
+            { name = ""; url = "https://mail.google.com/mail/u/0/" }
             { name = ""; url = "https://www.youtube.com/"; }
             { name = ""; url = "https://cobalt.tools/"; }
             { name = ""; url = "https://github.com/"; }
