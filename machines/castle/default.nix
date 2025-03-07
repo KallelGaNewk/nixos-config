@@ -1,13 +1,12 @@
 { pkgs, ... }: {
-  imports = [
-    ./hardware-configuration.nix
-    ../../modules/nixos/location.nix
-    ../../modules/nixos/services
-    ../../modules/nixos/steam.nix
-  ];
+  imports = [ ./hardware-configuration.nix ];
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Machine settings
+  hardware.enableAllFirmware = true;
+  hardware.enableAllHardware = true;
 
   # Allow Unfree packages
   nixpkgs.config.allowUnfree = true;

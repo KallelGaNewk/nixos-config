@@ -12,6 +12,7 @@
     extraPackages = with pkgs; [
       nixd
       rust-analyzer
+      nixfmt-rfc-style
     ];
     userSettings = {
       theme = {
