@@ -28,7 +28,7 @@
   # Network
   networking = {
     networkmanager.enable = true; # group: networkmanager
-    firewall.enable = {
+    firewall = {
       enable = false;
       allowedUDPPorts = [
         5353 # Spotifyd mDNS
