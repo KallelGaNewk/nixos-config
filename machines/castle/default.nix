@@ -1,6 +1,8 @@
 { inputs, ... }: {
   imports = [ ./hardware-configuration.nix ];
 
+  networking.hostName = "castle";
+
   # Users
   users.users.newky = {
     isNormalUser = true;

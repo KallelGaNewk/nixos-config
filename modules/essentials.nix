@@ -27,7 +27,6 @@
 
   # Network
   networking = {
-    hostName = "castle";
     networkmanager.enable = true; # group: networkmanager
     firewall.enable = {
       enable = false;

@@ -1,7 +1,8 @@
 { inputs, ... }: {
   imports = [ ./hardware-configuration.nix ];
 
-  # Users
+  networking.hostName = "lapcat";
+
   users.users.newky = {
     isNormalUser = true;
     description = "newky";
@@ -9,7 +10,6 @@
     password = "12345";
   };
 
-  # Home-manager settings
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.backupFileExtension = "homemanagerbackupwhichthereisnooptiontodisable";
@@ -25,9 +25,6 @@
 
       ../../user/modules/alacritty.nix
       ../../user/modules/floorp.nix
-      # ../../user/modules/osu.nix
-      # ../../user/modules/spotifyd.nix
-      # ../../user/modules/vscode.nix
       ../../user/modules/zed.nix
     ];
 
