@@ -36,7 +36,7 @@
         modules = [
           home-manager.nixosModules.home-manager
           nur.modules.nixos.default
-          ./machines/castle
+          ./machines/lapcats
 
           ./modules/essentials.nix
           ./modules/services
