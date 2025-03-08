@@ -1,16 +1,4 @@
 { pkgs, ... }: {
-  imports = [
-    ./alacritty.nix
-    ./cursor.nix
-    ./floorp.nix
-    ./gnome.nix
-    ./vscode.nix
-    ./zed.nix
-  ];
-
-  home.username = "newky";
-  home.homeDirectory = "/home/newky";
-
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
   # home.file.".config/i3/scripts" = {
@@ -29,9 +17,6 @@
       withVencord = true;
       withTTS = false;
     })
-    (osu-lazer-bin.override {
-      nativeWayland = true;
-    })
     telegram-desktop
 
     bottom # https://github.com/ClementTsang/bottom
@@ -45,27 +30,14 @@
     which
   ];
 
-  services.spotifyd = {
-    enable = true;
-    settings.global = {
-      device_name = "Newky";
-      zeroconf_port = 3535; # TCP
-    };
-  };
-
   programs.git = {
     enable = true;
     userName = "KallelGaNewk";
     userEmail = "kallelgn@gmail.com";
   };
 
-
-
   programs.bash = {
     enable = true;
     enableCompletion = true;
   };
-
-  home.stateVersion = "24.11";
-  programs.home-manager.enable = true;
 }

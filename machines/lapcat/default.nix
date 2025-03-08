@@ -25,9 +25,9 @@
 
       ../../user/modules/alacritty.nix
       ../../user/modules/floorp.nix
-      ../../user/modules/osu.nix
-      ../../user/modules/spotifyd.nix
-      ../../user/modules/vscode.nix
+      # ../../user/modules/osu.nix
+      # ../../user/modules/spotifyd.nix
+      # ../../user/modules/vscode.nix
       ../../user/modules/zed.nix
     ];
 

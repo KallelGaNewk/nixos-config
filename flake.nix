@@ -21,14 +21,13 @@
         modules = [
           home-manager.nixosModules.home-manager
           nur.modules.nixos.default
-
           ./machines/castle
+
+          ./modules/essentials.nix
           ./modules/services
           ./modules/location.nix
           ./modules/steam.nix
           ./modules/nvidia.nix
-
-          ./users/home-newky.nix
         ];
       };
       lapcat = nixpkgs.lib.nixosSystem {
@@ -37,8 +36,9 @@
         modules = [
           home-manager.nixosModules.home-manager
           nur.modules.nixos.default
+          ./machines/castle
 
-          ./machines/lapcat
+          ./modules/essentials.nix
           ./modules/services
           ./modules/location.nix
         ];
