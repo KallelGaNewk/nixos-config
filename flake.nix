@@ -13,36 +13,43 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nur, ... }: {
-    nixosConfigurations = {
-      castle = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          home-manager.nixosModules.home-manager
-          nur.modules.nixos.default
-          ./machines/castle
+  outputs =
+    inputs@{
+      nixpkgs,
+      home-manager,
+      nur,
+      ...
+    }:
+    {
+      nixosConfigurations = {
+        castle = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            home-manager.nixosModules.home-manager
+            nur.modules.nixos.default
+            ./machines/castle
 
-          ./modules/essentials.nix
-          ./modules/services
-          ./modules/location.nix
-          ./modules/steam.nix
-          ./modules/nvidia.nix
-        ];
-      };
-      lapcat = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          home-manager.nixosModules.home-manager
-          nur.modules.nixos.default
-          ./machines/lapcat
+            ./modules/essentials.nix
+            ./modules/services
+            ./modules/location.nix
+            ./modules/steam.nix
+            ./modules/nvidia.nix
+          ];
+        };
+        lapcat = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            home-manager.nixosModules.home-manager
+            nur.modules.nixos.default
+            ./machines/lapcat
 
-          ./modules/essentials.nix
-          ./modules/services
-          ./modules/location.nix
-        ];
+            ./modules/essentials.nix
+            ./modules/services
+            ./modules/location.nix
+          ];
+        };
       };
     };
-  };
 }

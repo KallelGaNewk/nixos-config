@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
   # home.file.".config/i3/scripts" = {
@@ -12,11 +13,7 @@
   # '';
 
   home.packages = with pkgs; [
-    (discord.override {
-      withOpenASAR = true;
-      withVencord = true;
-      withTTS = false;
-    })
+    (vesktop.override { withSystemVencord = true; })
     telegram-desktop
 
     bottom # https://github.com/ClementTsang/bottom

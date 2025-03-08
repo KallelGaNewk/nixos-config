@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   imports = [ ./hardware-configuration.nix ];
 
   networking.hostName = "castle";
@@ -7,7 +8,11 @@
   users.users.newky = {
     isNormalUser = true;
     description = "newky";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "gamemode"
+    ];
     password = "12345";
   };
 

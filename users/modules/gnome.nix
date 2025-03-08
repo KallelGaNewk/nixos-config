@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   dconf = {
     enable = true;
     settings."org/gnome/shell" = {
@@ -8,16 +9,28 @@
       ];
     };
 
-    # Dark mode interface
-    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+    settings = {
+      "org/gnome/desktop/interface" = {
+        # Dark mode interface
+        color-scheme = "prefer-dark";
 
-    # Disable screen dimming
-    settings."org/gnome/desktop/session".idle-delay = 0; # default: 300
-    settings."org/gnome/settings-daemon/plugins/power".idle-brightness = 100; # default: 30
-    settings."org/gnome/settings-daemon/plugins/power".sleep-inactive-ac-type = "nothing"; # default: suspend
+        # Fixes cursor themes
+        cursor-size = toString config.home.pointerCursor.size;
+        cursor-theme = config.home.pointerCursor.name;
+      };
 
-    # Fixes cursor themes in gnome apps under hyprland
-    settings."org/gnome/desktop/interface".cursor-size = toString config.home.pointerCursor.size;
-    settings."org/gnome/desktop/interface".cursor-theme = config.home.pointerCursor.name;
+      # Mouse acceleration
+      "org/gnome/desktop/peripherals/mouse".accel-profile = "flat";
+
+      # VRR
+      "org/gnome/mutter".experimental-features = [ "variable-refresh-rate" ];
+
+      # Disable screen dimming
+      "org/gnome/desktop/session".idle-delay = 0; # default: 300
+      "org/gnome/settings-daemon/plugins/power" = {
+        idle-brightness = 100; # default: 30
+        sleep-inactive-ac-type = "nothing"; # default: suspend
+      };
+    };
   };
 }

@@ -1,11 +1,17 @@
 # GNOME configuration
 
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   services.xserver = {
     enable = false; # Only using Wayland
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
   };
+
+  # Install extensions, enable on home-manager
+  environment.systemPackages = with pkgs.gnomeExtensions; [
+    appindicator
+  ];
 
   environment.gnome.excludePackages = with pkgs; [
     # baobab # Analyse disk usage

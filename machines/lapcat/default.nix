@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   imports = [ ./hardware-configuration.nix ];
 
   networking.hostName = "lapcat";
@@ -6,7 +7,10 @@
   users.users.newky = {
     isNormalUser = true;
     description = "newky";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     password = "12345";
   };
 

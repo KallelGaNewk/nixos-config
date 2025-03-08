@@ -1,6 +1,10 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Machine settings
   hardware.enableAllFirmware = true;

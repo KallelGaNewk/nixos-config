@@ -1,18 +1,34 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.floorp = {
     enable = true;
-    package = (pkgs.wrapFirefox (pkgs.floorp-unwrapped.override { pipewireSupport = true; }) {});
+    package = (pkgs.wrapFirefox (pkgs.floorp-unwrapped.override { pipewireSupport = true; }) { });
     profiles.default = {
       bookmarks = [
         {
           name = "Toolbar";
           toolbar = true;
           bookmarks = [
-            { name = ""; url = "https://mail.google.com/mail/u/0/"; }
-            { name = ""; url = "https://www.youtube.com/"; }
-            { name = ""; url = "https://cobalt.tools/"; }
-            { name = ""; url = "https://github.com/"; }
-            { name = ""; url = "https://www.instagram.com/ian_kallel/"; }
+            {
+              name = "";
+              url = "https://mail.google.com/mail/u/0/";
+            }
+            {
+              name = "";
+              url = "https://www.youtube.com/";
+            }
+            {
+              name = "";
+              url = "https://cobalt.tools/";
+            }
+            {
+              name = "";
+              url = "https://github.com/";
+            }
+            {
+              name = "";
+              url = "https://www.instagram.com/ian_kallel/";
+            }
           ];
         }
       ];
@@ -32,7 +48,7 @@
         "browser.newtabpage.activity-stream.floorp.newtab.imagecredit.hide" = true;
         "browser.newtabpage.activity-stream.floorp.newtab.releasenote.hide" = true;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
-        "browser.newtabpage.pinned" = [];
+        "browser.newtabpage.pinned" = [ ];
         "browser.tabs.warnOnClose" = false;
         "browser.toolbars.bookmarks.visibility" = "never";
         "browser.translations.neverTranslateLanguages" = "pt";

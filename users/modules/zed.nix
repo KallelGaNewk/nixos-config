@@ -1,4 +1,5 @@
-{ pkgs, lib, ... }: {
+{ pkgs, lib, ... }:
+{
   programs.zed-editor = {
     enable = true;
     extensions = [
@@ -43,7 +44,10 @@
         # };
       };
 
-      languages.Nix.language_servers = [ "nixd" "!nil" ];
+      languages.Nix.language_servers = [
+        "nixd"
+        "!nil"
+      ];
 
       # tab_size = 4;
       # prettier.tabWidth = 4;
