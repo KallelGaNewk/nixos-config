@@ -21,16 +21,16 @@
     home.homeDirectory = "/home/newky";
 
     imports = [
-      ../../user/modules/essentials.nix
-      ../../user/modules/cursor.nix
-      ../../user/modules/gnome.nix
+      ../../users/modules/essentials.nix
+      ../../users/modules/cursor.nix
+      ../../users/modules/gnome.nix
 
-      ../../user/modules/alacritty.nix
-      ../../user/modules/floorp.nix
-      ../../user/modules/osu.nix
-      ../../user/modules/spotifyd.nix
-      ../../user/modules/vscode.nix
-      ../../user/modules/zed.nix
+      ../../users/modules/alacritty.nix
+      ../../users/modules/floorp.nix
+      ../../users/modules/osu.nix
+      ../../users/modules/spotifyd.nix
+      ../../users/modules/vscode.nix
+      ../../users/modules/zed.nix
     ];
 
     programs.home-manager.enable = true;
