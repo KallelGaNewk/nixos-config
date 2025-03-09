@@ -1,17 +1,17 @@
-switch target:
-  sudo nixos-rebuild switch --flake .#{{target}}
+switch target="castle":
+    sudo nixos-rebuild switch --flake .#{{target}}
 
 update:
-  nix flake update
+    nix flake update
 
 upswitch:
-  sudo nixos-rebuild switch --recreate-lock-file --flake .
+    sudo nixos-rebuild switch --recreate-lock-file --flake .
 
 gc:
-  sudo nix-collect-garbage --delete-older-than 7d
+    sudo nix-collect-garbage --delete-older-than 7d
 
 debug:
-  sudo nixos-rebuild switch --flake . --show-trace --verbose
+    sudo nixos-rebuild switch --flake . --show-trace --verbose
 
 [confirm('Are you sure you want to delete all .homemanagerbackupwhichthereisnooptiontodisable files?')]
 fixhm:
