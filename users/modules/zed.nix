@@ -3,12 +3,11 @@
   programs.zed-editor = {
     enable = true;
     extensions = [
-      "catppuccin-blur"
       "html"
       "just"
       "nix"
       "toml"
-      "vscode_dark_modern"
+      "vscode-dark-modern"
     ];
     extraPackages = with pkgs; [
       nixd
@@ -18,13 +17,13 @@
     userSettings = {
       theme = {
         mode = "system";
-        light = "Catppuccin Latte (Blur)";
-        dark = "Catppuccin Espresso (Blur)";
+        light = "Ayu Light";
+        dark = "VSCode Dark Modern";
       };
       buffer_font_family = "Cascadia Code";
       buffer_font_features.calt = true;
       buffer_font_size = 15;
-      buffer_font_weight = 300;
+      buffer_font_weight = 350;
       buffer_line_height = "comfortable";
       when_closing_with_no_tabs = "keep_window_open";
       inlay_hints.enabled = true;

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+# { pkgs, ... }:
 {
   programs.vscode = {
     enable = true;
@@ -6,7 +6,7 @@
     profiles.default = {
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
-      extensions = with pkgs.vscode-extensions; [ ];
+      # extensions = with pkgs.vscode-extensions; [ ];
       userSettings = {
         "diffEditor.renderSideBySide" = false;
         "editor.fontFamily" = "Cascadia Code";

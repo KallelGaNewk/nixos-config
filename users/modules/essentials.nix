@@ -12,6 +12,10 @@
   #     xxx
   # '';
 
+  # Setup Vesktop configuration and plugins
+  home.file.".config/vesktop/settings.json".source = ../../assets/vesktop-settings.json;
+  home.file.".config/vesktop/settings/settings.json".source = ../../assets/vesktop-plugins.json;
+
   home.packages = with pkgs; [
     (vesktop.override { withSystemVencord = true; })
     telegram-desktop

@@ -38,6 +38,8 @@
       ];
       settings = {
         "browser.uiCustomization.state" = (builtins.readFile ../../assets/floorp-uiState.json);
+        "media.gmp-widevinecdm.enabled" = true; # Enable Widevine for DRM content
+
         "browser.bookmarks.restore_default_bookmarks" = false;
         "browser.download.panel.shown" = true;
         "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;

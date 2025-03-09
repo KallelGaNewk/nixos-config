@@ -13,15 +13,6 @@
   # Allow Unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Enable systemd-boot
-  boot.loader = {
-    systemd-boot = {
-      enable = true;
-      configurationLimit = 10;
-    };
-    efi.canTouchEfiVariables = true;
-  };
-
   # Perform garbage collection weekly
   nix.gc = {
     automatic = true;
