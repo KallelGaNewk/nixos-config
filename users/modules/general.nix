@@ -16,6 +16,15 @@
   home.file.".config/vesktop/settings.json".source = ../../assets/vesktop-settings.json;
   home.file.".config/vesktop/settings/settings.json".source = ../../assets/vesktop-plugins.json;
 
+  # EasyEffects presets and config
+  services.easyeffects.enable = true;
+  home.file.".config/easyeffects/autoload/input/mic.json" = {
+    source = ../../assets/easyeffects-input.json;
+  };
+  home.file.".config/easyeffects/autoload/output/headset.json" = {
+    source = ../../assets/easyeffects-output.json;
+  };
+
   home.packages = with pkgs; [
     (vesktop.override { withSystemVencord = true; })
     (osu-lazer-bin.override { nativeWayland = true; })
@@ -31,7 +40,6 @@
     telegram-desktop
     tree
     which
-    easyeffects
 
     # GTK skins
     #addwater

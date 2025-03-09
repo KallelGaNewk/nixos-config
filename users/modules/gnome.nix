@@ -5,6 +5,23 @@
   ...
 }:
 {
+  # https://discourse.nixos.org/t/icons-missing-in-gnome-applications/49835/7
+  gtk = {
+    enable = true;
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+  };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Bibata-Modern-Ice";
+    size = 24;
+    package = pkgs.bibata-cursors;
+  };
+
   dconf = {
     enable = true;
     settings."org/gnome/shell" = {
@@ -13,6 +30,7 @@
         appindicator.extensionUuid
         blur-my-shell.extensionUuid
         dash-to-dock.extensionUuid
+        easyeffects-preset-selector.extensionUuid
 
         "places-menu@gnome-shell-extensions.gcampax.github.com"
       ];

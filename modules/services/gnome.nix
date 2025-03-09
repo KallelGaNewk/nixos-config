@@ -16,6 +16,7 @@
     appindicator
     blur-my-shell
     dash-to-dock
+    easyeffects-preset-selector
   ];
 
   environment.gnome.excludePackages = with pkgs; [
@@ -29,7 +30,7 @@
     # gnome-bluetooth
     # gnome-color-manager
     # gnome-menus # Library that implements freedesktops's Desktop Menu Specification in GNOME
-    # gnome-shell-extensions
+    gnome-shell-extensions
     # gtk3.out # for gtk-launch program
     # xdg-user-dirs # Update user dirs as described in https://freedesktop.org/wiki/Software/xdg-user-dirs/
 

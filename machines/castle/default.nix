@@ -27,7 +27,6 @@
 
     imports = [
       ../../users/modules/general.nix
-      ../../users/modules/cursor.nix
       ../../users/modules/gnome.nix
 
       ../../users/modules/alacritty.nix
