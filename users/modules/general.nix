@@ -18,10 +18,10 @@
 
   # EasyEffects presets and config
   services.easyeffects.enable = true;
-  home.file.".config/easyeffects/autoload/input/mic.json" = {
+  home.file.".config/easyeffects/input/mic.json" = {
     source = ../../assets/easyeffects-input.json;
   };
-  home.file.".config/easyeffects/autoload/output/headset.json" = {
+  home.file.".config/easyeffects/output/headset.json" = {
     source = ../../assets/easyeffects-output.json;
   };
 
