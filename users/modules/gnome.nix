@@ -14,12 +14,32 @@
         blur-my-shell.extensionUuid
         dash-to-dock.extensionUuid
 
-        "apps-menu@gnome-shell-extensions.gcampax.github.com"
         "places-menu@gnome-shell-extensions.gcampax.github.com"
+      ];
+      disabled-extensions = [
+        # Default extensions, removing places-menu
+        "apps-menu@gnome-shell-extensions.gcampax.github.com"
+        "drive-menu@gnome-shell-extensions.gcampax.github.com"
+        "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
+        "light-style@gnome-shell-extensions.gcampax.github.com"
+        "status-icons@gnome-shell-extensions.gcampax.github.com"
+        "system-monitor@gnome-shell-extensions.gcampax.github.com"
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        "window-list@gnome-shell-extensions.gcampax.github.com"
+        "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
     };
 
     settings = {
+      "org/gnome/shell/extensions/dash-to-dock" = {
+        show-trash = false;
+        show-mounts = false;
+        custom-theme-shrink = true;
+        running-indicator-style = "DASHES";
+        running-indicator-dominant-color = true;
+      };
+
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
 

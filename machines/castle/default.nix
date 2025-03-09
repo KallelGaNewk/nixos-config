@@ -26,13 +26,12 @@
     home.homeDirectory = "/home/newky";
 
     imports = [
-      ../../users/modules/essentials.nix
+      ../../users/modules/general.nix
       ../../users/modules/cursor.nix
       ../../users/modules/gnome.nix
 
       ../../users/modules/alacritty.nix
       ../../users/modules/floorp.nix
-      ../../users/modules/osu.nix
       ../../users/modules/spotifyd.nix
       ../../users/modules/vscode.nix
       ../../users/modules/zed.nix

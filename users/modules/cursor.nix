@@ -21,4 +21,12 @@
     getFrom "https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Modern-Ice.tar.xz"
       "sha256-SG/NQd3K9DHNr9o4m49LJH+UC/a1eROUjrAQDSn3TAU="
       "Bibata-Modern-Ice";
+
+  # home.pointerCursor = {
+  #   gtk.enable = true;
+  #   x11.enable = true;
+  #   name = "Bibata-Modern-Ice";
+  #   size = 24;
+  #   package = pkgs.bibata-cursors;
+  # };
 }

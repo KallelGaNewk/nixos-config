@@ -23,7 +23,7 @@
     home.homeDirectory = "/home/newky";
 
     imports = [
-      ../../users/modules/essentials.nix
+      ../../users/modules/general.nix
       ../../users/modules/cursor.nix
       ../../users/modules/gnome.nix
 

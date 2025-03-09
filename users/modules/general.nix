@@ -18,17 +18,32 @@
 
   home.packages = with pkgs; [
     (vesktop.override { withSystemVencord = true; })
-    telegram-desktop
-
-    bottom # https://github.com/ClementTsang/bottom
-    fastfetch # https://github.com/fastfetch-cli/fastfetch
-    just # https://github.com/casey/just
-    lm_sensors
-    ouch # https://github.com/ouch-org/ouch
-
+    (osu-lazer-bin.override { nativeWayland = true; })
+    clapper # Video/audio app, VLC GTK basically
+    fastfetch
     file
+    just # Make but better
+    lm_sensors
+    mousam # Weather app
+    ouch # Easy (de)compressing
+    pinta
+    resources
+    telegram-desktop
     tree
     which
+    easyeffects
+
+    # GTK skins
+    #addwater
+    #adwsteamgtk
+
+    # Other tools
+    #bottles
+    #livecaptions
+    #authenticator
+    #video-trimmer
+    #iplookup-gtk
+    #binary
   ];
 
   programs.git = {

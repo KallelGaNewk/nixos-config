@@ -4,7 +4,10 @@
 {
   services.xserver = {
     enable = false; # Only using Wayland
-    displayManager.gdm.enable = true;
+    displayManager.gdm = {
+      enable = true;
+      wayland = true;
+    };
     desktopManager.gnome.enable = true;
   };
 
