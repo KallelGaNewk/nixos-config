@@ -12,11 +12,6 @@
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
-    cursorTheme = {
-      name = "Bibata-Modern-Ice";
-      size = 24;
-      package = pkgs.bibata-cursors;
-    };
   };
 
   home.pointerCursor = {
@@ -67,7 +62,7 @@
         color-scheme = "prefer-dark";
 
         # Fixes cursor themes
-        cursor-size = toString config.home.pointerCursor.size;
+        cursor-size = config.home.pointerCursor.size;
         cursor-theme = config.home.pointerCursor.name;
       };
 
