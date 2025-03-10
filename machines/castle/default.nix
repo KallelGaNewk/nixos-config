@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ ./hardware-configuration.nix ];
 
@@ -8,12 +8,12 @@
   users.users.newky = {
     isNormalUser = true;
     description = "newky";
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
       "gamemode"
     ];
-    password = "12345";
   };
 
   # Home-manager settings

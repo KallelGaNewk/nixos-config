@@ -60,8 +60,11 @@
     userEmail = "kallelgn@gmail.com";
   };
 
-  programs.bash = {
+  programs.gh = {
     enable = true;
-    enableCompletion = true;
+    extensions = [ pkgs.gh-copilot ];
+    settings = {
+      git_protocol = "ssh";
+    };
   };
 }
