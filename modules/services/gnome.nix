@@ -60,7 +60,7 @@
     gnome-contacts
     gnome-control-center # Settings app
     gnome-disk-utility # Udisks graphical front-end
-    gnome-font-viewer
+    # gnome-font-viewer
     gnome-logs
     gnome-music
     gnome-software

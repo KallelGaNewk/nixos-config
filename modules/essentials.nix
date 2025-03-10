@@ -48,5 +48,8 @@
   };
 
   programs.dconf.enable = true;
-  fonts.packages = [ pkgs.cascadia-code ];
+  fonts.packages = with pkgs; [
+    cascadia-code
+    nerd-fonts.caskaydia-mono
+  ];
 }
