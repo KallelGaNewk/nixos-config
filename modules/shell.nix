@@ -14,6 +14,10 @@
     systemPackages = [ pkgs.thefuck ];
   };
 
+  # Prevent the new user dialog in zsh
+  # https://wiki.nixos.org/wiki/Zsh#Hide_configuration_for_new_users
+  system.userActivationScripts.zshrc = "touch .zshrc";
+
   programs.zsh = {
     enable = true;
     histSize = 10000;

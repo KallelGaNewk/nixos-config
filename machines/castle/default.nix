@@ -10,6 +10,7 @@
     isNormalUser = true;
     description = "newky";
     useDefaultShell = true;
+    shell = pkgs.zsh;
     extraGroups = [
       "networkmanager"
       "wheel"
