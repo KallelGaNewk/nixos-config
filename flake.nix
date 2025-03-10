@@ -29,6 +29,7 @@
             home-manager.nixosModules.home-manager
             nur.modules.nixos.default
             ./machines/castle
+            ./modules/shell.nix
             ./modules/grub.nix
 
             ./modules/essentials.nix
@@ -45,6 +46,7 @@
             home-manager.nixosModules.home-manager
             nur.modules.nixos.default
             ./machines/lapcat
+            ./modules/shell.nix
             ./modules/systemd-boot.nix
 
             ./modules/essentials.nix
