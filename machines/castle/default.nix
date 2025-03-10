@@ -5,10 +5,11 @@
   networking.hostName = "castle";
 
   # Users
+  users.defaultUserShell = pkgs.zsh;
   users.users.newky = {
     isNormalUser = true;
     description = "newky";
-    shell = pkgs.zsh;
+    useDefaultShell = true;
     extraGroups = [
       "networkmanager"
       "wheel"

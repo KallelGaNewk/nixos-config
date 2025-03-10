@@ -11,6 +11,7 @@
       bashInteractive
       zsh
     ];
+    systemPackages = [ pkgs.thefuck ];
   };
 
   programs.zsh = {
