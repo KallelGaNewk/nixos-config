@@ -11,7 +11,12 @@
       bashInteractive
       zsh
     ];
+
     systemPackages = [ pkgs.thefuck ];
+
+    variables = {
+      SHELL = "${pkgs.zsh}/bin/zsh";
+    };
   };
 
   # Prevent the new user dialog in zsh
