@@ -1,8 +1,8 @@
 {
-    "discordBranch": "canary",
-    "minimizeToTray": false,
-    "arRPC": true,
-    "splashColor": "rgb(219, 222, 225)",
-    "splashBackground": "rgb(49, 51, 56)",
-    "customTitleBar": true
+  "discordBranch": "canary",
+  "minimizeToTray": true,
+  "arRPC": true,
+  "splashColor": "rgb(219, 222, 225)",
+  "splashBackground": "rgb(49, 51, 56)",
+  "customTitleBar": true
 }
