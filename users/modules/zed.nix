@@ -20,7 +20,6 @@
           provider = "copilot_chat";
           model = "claude-3-7-sonnet";
         };
-        version = 2;
       };
       theme = {
         mode = "system";
