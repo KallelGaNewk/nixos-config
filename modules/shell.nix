@@ -1,4 +1,4 @@
-# Configure Zsh and Bash for POSIX compliant shell if needed
+# Configure Zsh
 { pkgs, ... }:
 {
   environment = {
@@ -11,11 +11,6 @@
       bashInteractive
       zsh
     ];
-  };
-
-  programs.bash = {
-    enable = true;
-    enableCompletion = true;
   };
 
   programs.zsh = {
