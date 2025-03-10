@@ -28,24 +28,8 @@
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
         appindicator.extensionUuid
-        blur-my-shell.extensionUuid
         dash-to-dock.extensionUuid
         easyeffects-preset-selector.extensionUuid
-
-        "places-menu@gnome-shell-extensions.gcampax.github.com"
-      ];
-      disabled-extensions = [
-        # Default extensions, removing places-menu
-        "apps-menu@gnome-shell-extensions.gcampax.github.com"
-        "drive-menu@gnome-shell-extensions.gcampax.github.com"
-        "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
-        "light-style@gnome-shell-extensions.gcampax.github.com"
-        "status-icons@gnome-shell-extensions.gcampax.github.com"
-        "system-monitor@gnome-shell-extensions.gcampax.github.com"
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "window-list@gnome-shell-extensions.gcampax.github.com"
-        "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
     };
 
@@ -56,7 +40,23 @@
         custom-theme-shrink = true;
         running-indicator-style = "DASHES";
         running-indicator-dominant-color = true;
+        disable-overview-on-startup = true;
+        transparency-mode = "DYNAMIC";
+        customize-alphas = true;
+        min-alpha = 0.2;
+        max-alpha = 0.8;
       };
+
+      "org/gnome/desktop/background" =
+        let
+          # Can also be a local asset:
+          #background = "file://" + ../../assets/background.png;
+          background = "https://kallelganewk.github.io/background.jpg";
+        in
+        {
+          picture-uri = background;
+          picture-uri-dark = background;
+        };
 
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";

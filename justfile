@@ -15,8 +15,13 @@ debug:
 
 [confirm('Are you sure you want to delete all .homemanagerbackupwhichthereisnooptiontodisable files?')]
 fixhm:
-  sudo find / -type f -name "*.homemanagerbackupwhichthereisnooptiontodisable" -exec rm -f {} \;
+    sudo find / -type f -name "*.homemanagerbackupwhichthereisnooptiontodisable" -exec rm -f {} \;
 
 genhw target:
-  nixos-generate-config --dir ./machines/{{target}}
-  rm ./machines/{{target}}/configuration.nix
+    nixos-generate-config --dir ./machines/{{target}}
+    rm ./machines/{{target}}/configuration.nix
+
+commit:
+    git add .
+    git commit -m "update"
+    git push

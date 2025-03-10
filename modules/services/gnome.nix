@@ -14,7 +14,6 @@
   # Install extensions, enable on home-manager
   environment.systemPackages = with pkgs.gnomeExtensions; [
     appindicator
-    blur-my-shell
     dash-to-dock
     easyeffects-preset-selector
   ];
