@@ -30,7 +30,7 @@
         "terminal.integrated.cursorBlinking" = true;
         "terminal.integrated.cursorStyle" = "line";
         "terminal.integrated.cursorWidth" = 2;
-        "terminal.integrated.fontFamily" = "Cascadia Code";
+        "terminal.integrated.fontFamily" = "Cascadia Code NF";
         "terminal.integrated.smoothScrolling" = true;
         # QOL - Editor
         "editor.formatOnPaste" = true;

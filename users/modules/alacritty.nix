@@ -3,15 +3,18 @@
     enable = true;
     settings = {
       window = {
-        padding = { x = 3; y = 3; };
+        padding = {
+          x = 3;
+          y = 3;
+        };
         opacity = 0.95;
         blur = true;
       };
       font = {
-        normal.family = "Cascadia Code";
-        bold.family = "Cascadia Code";
-        italic.family = "Cascadia Code";
-        bold_italic.family = "Cascadia Code";
+        normal.family = "Cascadia Code NF";
+        bold.family = "Cascadia Code NF";
+        italic.family = "Cascadia Code NF";
+        bold_italic.family = "Cascadia Code NF";
       };
       cursor = {
         style = {
@@ -22,7 +25,11 @@
       };
       mouse.hide_when_typing = true;
       keyboard.bindings = [
-        { key = "N"; mods = "Control|Shift"; action = "CreateNewWindow"; }
+        {
+          key = "N";
+          mods = "Control|Shift";
+          action = "CreateNewWindow";
+        }
       ];
 
       # (Github Dark) github.com/rojekt0n/github-theme-contrib

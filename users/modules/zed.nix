@@ -32,6 +32,9 @@
       buffer_font_size = 15;
       buffer_font_weight = 350;
       buffer_line_height = "comfortable";
+      terminal = {
+        font_family = "Cascadia Code NF";
+      };
       when_closing_with_no_tabs = "keep_window_open";
       inlay_hints.enabled = true;
       autosave = "on_focus_change";
