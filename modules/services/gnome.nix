@@ -53,14 +53,14 @@
     yelp # GNOME help
     gnome-backgrounds
     gnome-calculator
-    gnome-calendar
+    # gnome-calendar
     gnome-characters
     gnome-connections # Remote Desktop
     gnome-console
     gnome-contacts
     gnome-control-center # Settings app
     gnome-disk-utility # Udisks graphical front-end
-    # gnome-font-viewer
+    gnome-font-viewer
     gnome-logs
     gnome-music
     gnome-software
@@ -71,9 +71,9 @@
     gnome-weather
 
     # Enable only on LapCat
-    # gnome-clocks
-    # gnome-maps
-    # simple-scan
+    gnome-clocks
+    gnome-maps
+    simple-scan
   ];
 
   # Systray Icons
