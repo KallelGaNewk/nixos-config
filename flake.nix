@@ -47,11 +47,16 @@
             nur.modules.nixos.default
             ./machines/lapcat
             ./modules/shell.nix
-            ./modules/systemd-boot.nix
+            ./modules/grub.nix
 
             ./modules/essentials.nix
-            ./modules/services
+            # ./modules/services
             ./modules/location.nix
+
+            ./modules/services/openssh.nix
+            ./modules/services/pipewire.nix
+            ./modules/services/printing.nix
+            ./modules/services/pantheon.nix
           ];
         };
       };
