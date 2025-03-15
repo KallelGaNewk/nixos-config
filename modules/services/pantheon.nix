@@ -12,7 +12,7 @@
     loupe # Image viewer
     nautilus # File explorer
     sushi # QuickLook from macOS
-    elementary-screenshot
+    pantheon.elementary-screenshot
   ];
 
   fonts.packages = [
