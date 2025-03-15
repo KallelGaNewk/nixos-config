@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   services.xserver = {
     enable = false; # Only using Wayland
