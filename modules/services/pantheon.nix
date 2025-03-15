@@ -9,17 +9,35 @@
     };
   };
 
-  services.pantheon.apps.enable = false;
+  environment = {
+    systemPackages = with pkgs; [
+      baobab # Analyse disk usage
+      loupe # Image viewer
+      nautilus # File explorer
+      sushi # QuickLook from macOS
 
-  environment.systemPackages = with pkgs; [
-    baobab # Analyse disk usage
-    loupe # Image viewer
-    nautilus # File explorer
-    sushi # QuickLook from macOS
-    pantheon.elementary-screenshot
-  ];
-
-  fonts.packages = [
-    pkgs.pantheon.elementary-redacted-script
-  ];
+      # To run GNOME apps
+      adwaita-icon-theme
+      gnome-themes-extra
+    ];
+    pantheon.excludePackages = with pkgs; [
+      evince
+      file-roller
+    ];
+    pantheon.excludePackages = with pkgs.pantheon; [
+        elementary-calculator
+        elementary-calendar
+        elementary-camera
+        elementary-code
+        elementary-files
+        elementary-mail
+        elementary-music
+        elementary-photos
+        elementary-screenshot
+        elementary-tasks
+        elementary-terminal
+        elementary-videos
+        epiphany
+    ];
+  };
 }
