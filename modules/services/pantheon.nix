@@ -1,8 +1,12 @@
 { pkgs, ... }:
 {
   services.xserver = {
-    enable = false; # Only using Wayland
+    enable = true; # Use "Secure Session" to use Wayland
     desktopManager.pantheon.enable = true;
+    displayManager.lightdm = {
+      enable = true;
+      greeters.pantheon.enable = true;
+    };
   };
 
   services.pantheon.apps.enable = false;

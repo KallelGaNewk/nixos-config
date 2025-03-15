@@ -29,7 +29,8 @@
 
     imports = [
       ../../users/modules/general.nix
-      ../../users/modules/gnome.nix
+      ../../users/modules/gnome-dconf.nix
+      ../../users/modules/cursor.nix
 
       ../../users/modules/alacritty.nix
       ../../users/modules/floorp.nix
