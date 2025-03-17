@@ -20,11 +20,9 @@
       adwaita-icon-theme
       gnome-themes-extra
     ];
-    pantheon.excludePackages = with pkgs; [
-      evince
-      file-roller
-    ];
-    pantheon.excludePackages = with pkgs.pantheon; [
+    pantheon.excludePackages =
+      with pkgs.pantheon;
+      [
         elementary-calculator
         elementary-calendar
         elementary-camera
@@ -38,6 +36,10 @@
         elementary-terminal
         elementary-videos
         epiphany
-    ];
+      ]
+      ++ (with pkgs; [
+        evince
+        file-roller
+      ]);
   };
 }
