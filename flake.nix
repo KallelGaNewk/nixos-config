@@ -53,7 +53,7 @@
             # ./modules/services
             ./modules/location.nix
 
-            ./modules/services/steam.nix
+            ./modules/steam.nix
             ./modules/services/openssh.nix
             ./modules/services/pipewire.nix
             ./modules/services/printing.nix
