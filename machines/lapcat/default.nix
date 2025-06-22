@@ -24,7 +24,7 @@
 
     imports = [
       ../../users/modules/general.nix
-      ../../users/modules/pantheon-dconf.nix
+      ../../users/modules/gnome-dconf.nix
       ../../users/modules/cursor.nix
 
       ../../users/modules/alacritty.nix
