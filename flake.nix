@@ -57,7 +57,7 @@
             ./modules/services/openssh.nix
             ./modules/services/pipewire.nix
             ./modules/services/printing.nix
-            ./modules/services/pantheon.nix
+            ./modules/services/gnome.nix
           ];
         };
       };
