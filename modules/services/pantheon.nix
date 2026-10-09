@@ -3,10 +3,11 @@
   services.xserver = {
     enable = true; # Use "Secure Session" to use Wayland
     desktopManager.pantheon.enable = true;
-    displayManager.lightdm = {
-      enable = true;
-      greeters.pantheon.enable = true;
-    };
+  };
+
+  services.displayManager.lightdm = {
+    enable = true;
+    greeters.pantheon.enable = true;
   };
 
   environment = {

@@ -4,11 +4,12 @@
 {
   services.xserver = {
     enable = false; # Only using Wayland
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
-    };
     desktopManager.gnome.enable = true;
+  };
+
+  services.displayManager.gdm = {
+    enable = true;
+    wayland = true;
   };
 
   # Install extensions, enable on home-manager
